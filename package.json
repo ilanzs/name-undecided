@@ -1,0 +1,37 @@
+{
+  "name": "name-undecided",
+  "version": "1.0.0",
+  "description": "A toy Neural Network library.",
+  "main": "lib/NeuralNetwork.js",
+  "types": "lib/NeuralNetwork.d.ts",
+  "files": ["lib/**/*"],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.ts\"",
+    "lint": "tslint -p tsconfig.json",
+    "prepare" : "npm run build",
+    "prepublishOnly" : "npm run lint",
+    "preversion" : "npm run lint",
+    "version" : "npm run format && git add -A src",
+    "postversion" : "git push && git push --tags"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ilanzs/name-undecided.git"
+  },
+  "keywords": ["NeuralNetwork", "machine learning", "AI", "artificial intelligence", "ml"],
+  "author": "Ilan Segal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ilanzs/name-undecided/issues"
+  },
+  "homepage": "https://github.com/ilanzs/name-undecided#readme",
+  "devDependencies": {
+    "prettier": "^2.5.1",
+    "tslint": "^6.1.3",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^4.5.5"
+  },
+  
+}
