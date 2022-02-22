@@ -30,7 +30,7 @@ export class NeuralNetwork {
   biasIH: Matrix;
   biasHO: any;
   lr: number;
-  constructor(inNum: number, hidNum: number, outNum: number) {
+  constructor(inNum: number, hidNum: number, outNum: number, lr: number) {
     this.inputNum = inNum;
     this.hiddenNum = hidNum;
     this.outputNum = outNum;
@@ -45,7 +45,7 @@ export class NeuralNetwork {
     this.biasHO = new Matrix(this.outputNum, 1);
     this.biasHO.map(random);
 
-    this.lr = 1;
+    this.lr = lr;
   }
 
   feedForward(inputs: number[]) {
